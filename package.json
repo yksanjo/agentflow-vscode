@@ -1,0 +1,48 @@
+{
+  "name": "agentflow-vscode",
+  "displayName": "AgentFlow",
+  "description": "AgentFlow VSCode Extension - Browse and install workflows from VSCode",
+  "version": "1.0.0",
+  "publisher": "agentflow",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other",
+    "Extension Packs"
+  ],
+  "activationEvents": [
+    "onCommand:agentflow.browse",
+    "onCommand:agentflow.install"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "agentflow.browse",
+        "title": "AgentFlow: Browse Workflows"
+      },
+      {
+        "command": "agentflow.install",
+        "title": "AgentFlow: Install Workflow"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "agentflow",
+          "title": "AgentFlow",
+          "icon": "icon.png"
+        }
+      ]
+    },
+    "views": {
+      "agentflow": [
+        {
+          "id": "workflows",
+          "title": "Workflows"
+        }
+      ]
+    }
+  }
+}
